@@ -8,8 +8,9 @@
 import Foundation
 
 class OMDbMovieSearchMockService: OMDbMovieSearchService {
-    func getMovieList(forSearchKey: String) async throws -> OMDbMovieSearchResponse? {
-        try await Task.sleep(for: .seconds(1))
+    func searchMovies(forKey: String, page: Int) async throws -> OMDbMovieSearchResponse? {
+   
+        try await Task.sleep(nanoseconds: 1_000_000_000)
         return OMDbMovieSearchResponse.MockResponse
     }
     

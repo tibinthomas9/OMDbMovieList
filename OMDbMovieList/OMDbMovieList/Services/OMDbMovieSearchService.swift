@@ -8,5 +8,5 @@
 import Foundation
 
 protocol OMDbMovieSearchService {
-    func getMovieList(forSearchKey: String) async throws -> OMDbMovieSearchResponse?
+    func searchMovies(forKey: String, page: Int) async throws -> OMDbMovieSearchResponse?
 }
