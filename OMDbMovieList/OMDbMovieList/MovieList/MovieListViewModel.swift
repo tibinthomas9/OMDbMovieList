@@ -10,7 +10,7 @@ import Foundation
 class MovieListViewModel: ObservableObject  {
     
     //MARK: State Variables
-    @Published private(set) var state = LoadingState.loading
+    @Published private(set) var state = LoadingState.empty
     @Published var movies: [OMDbMovie] = []
     @Published var searchKey: String = "Batman"
     @Published private var error: Error?
@@ -24,13 +24,13 @@ class MovieListViewModel: ObservableObject  {
     
     //MARK: Data Retrieval
     func getMovies() async throws {
+        state = .loading
         do {
             if let moviesResponse = try await client.searchMovies(forKey: searchKey, page: page) {
                 processMovies(response: moviesResponse)
             }
             self.state = movies.isEmpty ? .empty :.loaded
         } catch {
-            self.movies = []
             self.state = .error(error)
         }
     }
@@ -57,7 +57,7 @@ class MovieListViewModel: ObservableObject  {
     }
     
     func loadNextPage() async throws {
-        guard state != .loading else { return }
+        guard state != .loading, isMoreDataAvailable() else { return }
         page += 1
         try await getMovies()
         
