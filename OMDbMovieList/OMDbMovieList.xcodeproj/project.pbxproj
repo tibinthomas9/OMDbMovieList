@@ -25,6 +25,7 @@
 		C29342322BED1CE4006235DF /* LoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29342312BED1CE4006235DF /* LoadingState.swift */; };
 		C29342342BED1EBA006235DF /* OMDbMovieSearchHttpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29342332BED1EBA006235DF /* OMDbMovieSearchHttpService.swift */; };
 		C29342382BED30CD006235DF /* MovieListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29342362BED30A9006235DF /* MovieListViewModelTests.swift */; };
+		C293423A2BED3FEA006235DF /* OMDbMovieSearchHttpServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29342392BED3FEA006235DF /* OMDbMovieSearchHttpServiceTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		C29342312BED1CE4006235DF /* LoadingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingState.swift; sourceTree = "<group>"; };
 		C29342332BED1EBA006235DF /* OMDbMovieSearchHttpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMDbMovieSearchHttpService.swift; sourceTree = "<group>"; };
 		C29342362BED30A9006235DF /* MovieListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewModelTests.swift; sourceTree = "<group>"; };
+		C29342392BED3FEA006235DF /* OMDbMovieSearchHttpServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMDbMovieSearchHttpServiceTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 			children = (
 				C29341FB2BEBEE71006235DF /* OMDbMovieListTests.swift */,
 				C29342362BED30A9006235DF /* MovieListViewModelTests.swift */,
+				C29342392BED3FEA006235DF /* OMDbMovieSearchHttpServiceTests.swift */,
 			);
 			path = OMDbMovieListTests;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C293423A2BED3FEA006235DF /* OMDbMovieSearchHttpServiceTests.swift in Sources */,
 				C29341FC2BEBEE71006235DF /* OMDbMovieListTests.swift in Sources */,
 				C29342382BED30CD006235DF /* MovieListViewModelTests.swift in Sources */,
 			);
