@@ -14,6 +14,10 @@
 		C29341FC2BEBEE71006235DF /* OMDbMovieListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29341FB2BEBEE71006235DF /* OMDbMovieListTests.swift */; };
 		C29342062BEBEE71006235DF /* OMDbMovieListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29342052BEBEE71006235DF /* OMDbMovieListUITests.swift */; };
 		C29342082BEBEE71006235DF /* OMDbMovieListUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29342072BEBEE71006235DF /* OMDbMovieListUITestsLaunchTests.swift */; };
+		C29342162BECE6DF006235DF /* OMDbMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29342152BECE6DF006235DF /* OMDbMovie.swift */; };
+		C29342182BECE7C5006235DF /* OMDbMovieSearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29342172BECE7C5006235DF /* OMDbMovieSearchResponse.swift */; };
+		C293421C2BECE952006235DF /* OMDbMovieSearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C293421B2BECE952006235DF /* OMDbMovieSearchService.swift */; };
+		C293421F2BECEAAB006235DF /* OMDbMovieSearchMockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C293421E2BECEAAB006235DF /* OMDbMovieSearchMockService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,10 @@
 		C29342012BEBEE71006235DF /* OMDbMovieListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OMDbMovieListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C29342052BEBEE71006235DF /* OMDbMovieListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMDbMovieListUITests.swift; sourceTree = "<group>"; };
 		C29342072BEBEE71006235DF /* OMDbMovieListUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMDbMovieListUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C29342152BECE6DF006235DF /* OMDbMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMDbMovie.swift; sourceTree = "<group>"; };
+		C29342172BECE7C5006235DF /* OMDbMovieSearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMDbMovieSearchResponse.swift; sourceTree = "<group>"; };
+		C293421B2BECE952006235DF /* OMDbMovieSearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMDbMovieSearchService.swift; sourceTree = "<group>"; };
+		C293421E2BECEAAB006235DF /* OMDbMovieSearchMockService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMDbMovieSearchMockService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +103,9 @@
 			isa = PBXGroup;
 			children = (
 				C29341EA2BEBEE6F006235DF /* OMDbMovieListApp.swift */,
+				C293421D2BECEA6F006235DF /* Mocks */,
+				C29342142BECE6AA006235DF /* Models */,
+				C293421A2BECE92B006235DF /* Services */,
 				C29341EC2BEBEE6F006235DF /* ContentView.swift */,
 				C29341EE2BEBEE71006235DF /* Assets.xcassets */,
 				C29341F02BEBEE71006235DF /* Preview Content */,
@@ -127,6 +138,31 @@
 			path = OMDbMovieListUITests;
 			sourceTree = "<group>";
 		};
+		C29342142BECE6AA006235DF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C29342152BECE6DF006235DF /* OMDbMovie.swift */,
+				C29342172BECE7C5006235DF /* OMDbMovieSearchResponse.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C293421A2BECE92B006235DF /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C293421B2BECE952006235DF /* OMDbMovieSearchService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		C293421D2BECEA6F006235DF /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				C293421E2BECEAAB006235DF /* OMDbMovieSearchMockService.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,6 +173,7 @@
 				C29341E32BEBEE6F006235DF /* Sources */,
 				C29341E42BEBEE6F006235DF /* Frameworks */,
 				C29341E52BEBEE6F006235DF /* Resources */,
+				C29342192BECE8D3006235DF /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -252,13 +289,37 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		C29342192BECE8D3006235DF /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C29341E32BEBEE6F006235DF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C29342162BECE6DF006235DF /* OMDbMovie.swift in Sources */,
+				C293421C2BECE952006235DF /* OMDbMovieSearchService.swift in Sources */,
+				C293421F2BECEAAB006235DF /* OMDbMovieSearchMockService.swift in Sources */,
 				C29341ED2BEBEE6F006235DF /* ContentView.swift in Sources */,
 				C29341EB2BEBEE6F006235DF /* OMDbMovieListApp.swift in Sources */,
+				C29342182BECE7C5006235DF /* OMDbMovieSearchResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
