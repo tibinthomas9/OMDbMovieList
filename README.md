@@ -13,8 +13,14 @@ Displays a searchable list of movies based on an input key using OMDb API
 
 <img src="https://github.com/tibinthomas9/OMDbMovieList/assets/29753504/baa23e26-626f-48d9-9a66-59431b5c776f" width="360" height="760" />
 
-
 <img src="https://github.com/tibinthomas9/OMDbMovieList/assets/29753504/2c7c5bd1-8cf7-48d1-b938-33106d05b336" width="360" height="760" />
+
+## Error and No data view screenshots
+
+<img src="https://github.com/tibinthomas9/OMDbMovieList/assets/29753504/638ed954-ce10-455b-8b44-374bca1c3fe3" width="360" height="760" />
+
+<img src="https://github.com/tibinthomas9/OMDbMovieList/assets/29753504/bc0d5218-8a46-4dff-971c-8bf841964390" width="360" height="760" />
+
 
 
 
