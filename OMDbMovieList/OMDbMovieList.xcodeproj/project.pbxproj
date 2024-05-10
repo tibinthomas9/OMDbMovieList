@@ -26,6 +26,13 @@
 		C29342342BED1EBA006235DF /* OMDbMovieSearchHttpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29342332BED1EBA006235DF /* OMDbMovieSearchHttpService.swift */; };
 		C29342382BED30CD006235DF /* MovieListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29342362BED30A9006235DF /* MovieListViewModelTests.swift */; };
 		C293423A2BED3FEA006235DF /* OMDbMovieSearchHttpServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29342392BED3FEA006235DF /* OMDbMovieSearchHttpServiceTests.swift */; };
+		C293423C2BED78F7006235DF /* MovieListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C293423B2BED78F7006235DF /* MovieListView.swift */; };
+		C293423F2BED79CC006235DF /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C293423E2BED79CC006235DF /* LoadingView.swift */; };
+		C29342412BED7A70006235DF /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29342402BED7A70006235DF /* ErrorView.swift */; };
+		C29342432BED7AAB006235DF /* NoItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29342422BED7AAB006235DF /* NoItemView.swift */; };
+		C29342452BEDAC22006235DF /* MovieRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29342442BEDAC22006235DF /* MovieRowView.swift */; };
+		C29342472BEDAC87006235DF /* RoundedRectangleBorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29342462BEDAC87006235DF /* RoundedRectangleBorderView.swift */; };
+		C29342492BEDBBD3006235DF /* CardBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29342482BEDBBD3006235DF /* CardBackground.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +67,13 @@
 		C29342332BED1EBA006235DF /* OMDbMovieSearchHttpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMDbMovieSearchHttpService.swift; sourceTree = "<group>"; };
 		C29342362BED30A9006235DF /* MovieListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewModelTests.swift; sourceTree = "<group>"; };
 		C29342392BED3FEA006235DF /* OMDbMovieSearchHttpServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMDbMovieSearchHttpServiceTests.swift; sourceTree = "<group>"; };
+		C293423B2BED78F7006235DF /* MovieListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListView.swift; sourceTree = "<group>"; };
+		C293423E2BED79CC006235DF /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		C29342402BED7A70006235DF /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		C29342422BED7AAB006235DF /* NoItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoItemView.swift; sourceTree = "<group>"; };
+		C29342442BEDAC22006235DF /* MovieRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRowView.swift; sourceTree = "<group>"; };
+		C29342462BEDAC87006235DF /* RoundedRectangleBorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedRectangleBorderView.swift; sourceTree = "<group>"; };
+		C29342482BEDBBD3006235DF /* CardBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardBackground.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +120,7 @@
 				C29342142BECE6AA006235DF /* Models */,
 				C293421A2BECE92B006235DF /* Services */,
 				C29342202BECEE3D006235DF /* Networking */,
+				C293423D2BED79B7006235DF /* Custom Views */,
 				C293422B2BECF1D8006235DF /* Constants */,
 				C29342352BED258B006235DF /* Helpers */,
 				C293421D2BECEA6F006235DF /* Mocks */,
@@ -199,6 +214,8 @@
 			isa = PBXGroup;
 			children = (
 				C293422F2BED1BC0006235DF /* MovieListViewModel.swift */,
+				C293423B2BED78F7006235DF /* MovieListView.swift */,
+				C29342442BEDAC22006235DF /* MovieRowView.swift */,
 			);
 			path = MovieList;
 			sourceTree = "<group>";
@@ -209,6 +226,18 @@
 				C29342312BED1CE4006235DF /* LoadingState.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		C293423D2BED79B7006235DF /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				C293423E2BED79CC006235DF /* LoadingView.swift */,
+				C29342482BEDBBD3006235DF /* CardBackground.swift */,
+				C29342462BEDAC87006235DF /* RoundedRectangleBorderView.swift */,
+				C29342422BED7AAB006235DF /* NoItemView.swift */,
+				C29342402BED7A70006235DF /* ErrorView.swift */,
+			);
+			path = "Custom Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,12 +363,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				C29342162BECE6DF006235DF /* OMDbMovie.swift in Sources */,
+				C29342452BEDAC22006235DF /* MovieRowView.swift in Sources */,
 				C293421C2BECE952006235DF /* OMDbMovieSearchService.swift in Sources */,
+				C293423C2BED78F7006235DF /* MovieListView.swift in Sources */,
 				C293421F2BECEAAB006235DF /* OMDbMovieSearchMockService.swift in Sources */,
+				C29342472BEDAC87006235DF /* RoundedRectangleBorderView.swift in Sources */,
+				C29342492BEDBBD3006235DF /* CardBackground.swift in Sources */,
+				C29342412BED7A70006235DF /* ErrorView.swift in Sources */,
 				C29341ED2BEBEE6F006235DF /* ContentView.swift in Sources */,
+				C293423F2BED79CC006235DF /* LoadingView.swift in Sources */,
 				C29341EB2BEBEE6F006235DF /* OMDbMovieListApp.swift in Sources */,
 				C29342322BED1CE4006235DF /* LoadingState.swift in Sources */,
 				C29342342BED1EBA006235DF /* OMDbMovieSearchHttpService.swift in Sources */,
+				C29342432BED7AAB006235DF /* NoItemView.swift in Sources */,
 				C29342182BECE7C5006235DF /* OMDbMovieSearchResponse.swift in Sources */,
 				C29342232BECEEA2006235DF /* APIError.swift in Sources */,
 				C29342282BECEF44006235DF /* URLEndpoint.swift in Sources */,

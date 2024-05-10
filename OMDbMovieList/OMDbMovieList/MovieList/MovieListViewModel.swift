@@ -6,13 +6,14 @@
 //
 
 import Foundation
+
 @MainActor
 class MovieListViewModel: ObservableObject  {
     
     //MARK: State Variables
     @Published private(set) var state = LoadingState.empty
     @Published var movies: [OMDbMovie] = []
-    @Published var searchKey: String = "Batman"
+    @Published var searchKey: String = "John Wick 2"
     @Published private var error: Error?
     
     //MARK: Pagination logic
@@ -32,6 +33,7 @@ class MovieListViewModel: ObservableObject  {
             self.state = movies.isEmpty ? .empty :.loaded
         } catch {
             self.state = .error(error)
+            self.error = error
         }
     }
     
