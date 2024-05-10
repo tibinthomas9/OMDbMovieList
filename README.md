@@ -29,4 +29,4 @@ Displays a searchable list of movies based on an iput key using OMDb API
 
 # App Wiki
 
-[Link](https://github.com/tibinthomas9/OMDbMovieList.wiki.git)
+[Link](https://github.com/tibinthomas9/OMDbMovieList/wiki)
