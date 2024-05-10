@@ -26,3 +26,7 @@ Displays a searchable list of movies based on an iput key using OMDb API
 - Swift Async await 
 - Swift Existential any
 - Test Coverage: 88%
+
+# App Wiki
+
+[Link](https://github.com/tibinthomas9/OMDbMovieList.wiki.git)
