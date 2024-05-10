@@ -1,6 +1,6 @@
 # OMDbMovieList
 
-Displays a searchable list of movies based on an iput key using OMDb API
+Displays a searchable list of movies based on an input key using OMDb API
 
 
 # Tech Stack: Swift, SwiftUI
