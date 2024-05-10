@@ -9,6 +9,15 @@ Displays a searchable list of movies based on an iput key using OMDb API
 
 # Deployment Target: iOS 15
 
+# Screenshots
+
+<img src="https://github.com/tibinthomas9/OMDbMovieList/assets/29753504/baa23e26-626f-48d9-9a66-59431b5c776f" width="360" height="760" />
+
+
+<img src="https://github.com/tibinthomas9/OMDbMovieList/assets/29753504/2c7c5bd1-8cf7-48d1-b938-33106d05b336" width="360" height="760" />
+
+
+
 # Fuctional Features
 
 - SwiftUI ListView with search and refresh implemented using searchable and refreshable modifiers
@@ -26,6 +35,10 @@ Displays a searchable list of movies based on an iput key using OMDb API
 - Swift Async await 
 - Swift Existential any
 - Test Coverage: 88%
+
+
+
+
 
 # App Wiki
 
